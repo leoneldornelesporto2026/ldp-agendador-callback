@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; base-uri 'none'; form-action 'none'">
+<title>L.D.Porto — Retorno Instagram</title>
+<style>body{font:18px system-ui;background:#151515;color:#fafafa;max-width:720px;margin:10vh auto;padding:24px}h1{font-size:28px}button{background:#bd2027;color:white;border:0;padding:14px 24px;border-radius:8px;font:inherit;cursor:pointer}p{line-height:1.6}</style>
+<h1>Volte ao Agendador L.D.Porto</h1>
+<p>Copie a URL completa desta página e cole no campo de retorno do aplicativo. Essa URL é temporária e contém o código da autorização. Mantenha-a apenas no seu computador.</p>
+<button id="copy">Copiar URL de retorno</button>
+<p id="status"></p>
+<script>
+document.getElementById('copy').onclick=async()=>{
+  try{await navigator.clipboard.writeText(location.href);document.getElementById('status').textContent='Copiado. Cole no aplicativo e clique Concluir conexão.'}
+  catch{document.getElementById('status').textContent='Selecione a barra de endereço e copie a URL completa manualmente.'}
+};
+</script>
+</html>
